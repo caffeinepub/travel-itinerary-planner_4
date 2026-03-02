@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 9,
+  "summary": "A travel itinerary planner website where users can plan and manage their travel itineraries.",
+  "architectural_notes": [],
+  "known_issues": [
+    "App failing to create trip — reported by user, fix in progress."
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-build-a-home-landing-page-that-showcases-the-app-with-a-hero-section-a-brief-feature-highlights-section-and-a-call-to-action-to-start-planning-display-a-list-of-all-existing-itineraries-as-cards-with-trip-name-destination-and-date-range",
+      "title": "Build a home/landing page that showcases the app with a hero section, a brief feature highlights section, and a call-to-action to start planning. Display a list of all existing itineraries as cards with trip name, destination, and date range.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-create-edit-itinerary-form-page-where-users-can-input-a-trip-name-destination-start-date-end-date-and-description-on-save-the-itinerary-is-persisted-to-the-backend-when-editing-fields-are-pre-populated-with-existing-values",
+      "title": "Build a 'Create / Edit Itinerary' form page where users can input a trip name, destination, start date, end date, and description. On save, the itinerary is persisted to the backend. When editing, fields are pre-populated with existing values.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-an-itinerary-detail-page-that-shows-the-trip-overview-name-destination-dates-description-and-a-day-by-day-timeline-of-activities-each-activity-card-should-display-its-title-time-location-and-notes-allow-users-to-add-edit-and-delete-activities-per-day-allow-users-to-delete-the-entire-itinerary-from-this-page",
+      "title": "Build an itinerary detail page that shows the trip overview (name, destination, dates, description) and a day-by-day timeline of activities. Each activity card should display its title, time, location, and notes. Allow users to add, edit, and delete activities per day. Allow users to delete the entire itinerary from this page.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-warm-adventurous-visual-theme-throughout-the-app-use-earthy-tones-terracotta-sandy-beige-deep-forest-green-with-clean-sans-serif-typography-generous-whitespace-and-map-travel-inspired-decorative-elements-the-layout-should-feel-modern-and-editorial-with-card-based-content-blocks-and-smooth-hover-interactions",
+      "title": "Apply a warm, adventurous visual theme throughout the app. Use earthy tones (terracotta, sandy beige, deep forest green) with clean sans-serif typography, generous whitespace, and map/travel-inspired decorative elements. The layout should feel modern and editorial, with card-based content blocks and smooth hover interactions.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-render-a-hero-background-image-for-the-landing-page-hero-bg-dim-1440x600-png-and-an-app-logo-mark-logo-mark-dim-128x128-png-as-static-assets-served-from-frontend-public-assets-generated",
+      "title": "Generate and render a hero background image for the landing page (hero-bg.dim_1440x600.png) and an app logo mark (logo-mark.dim_128x128.png) as static assets served from frontend/public/assets/generated.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-prominent-plan-an-itinerary-for-a-country-column-section-on-the-home-page-it-should-display-a-heading-plan-an-itinerary-for-a-country-a-searchable-dropdown-listing-all-world-countries-and-a-start-planning-button-when-the-user-selects-a-country-and-clicks-the-button-they-are-navigated-to-the-create-itinerary-form-itinerary-new-with-the-destination-field-pre-populated-with-the-selected-country-name",
+      "title": "Add a prominent 'Plan an Itinerary for a Country' column/section on the Home page. It should display a heading 'Plan an Itinerary for a Country', a searchable dropdown listing all world countries, and a 'Start Planning' button. When the user selects a country and clicks the button, they are navigated to the Create Itinerary form (/itinerary/new) with the destination field pre-populated with the selected country name.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-bug-preventing-itinerary-creation-investigate-and-resolve-the-issue-in-the-create-itinerary-form-and-or-backend-so-that-submitting-a-new-itinerary-successfully-persists-to-the-backend-and-navigates-the-user-to-the-itinerary-detail-page",
+      "title": "Fix the bug preventing itinerary creation. Investigate and resolve the issue in the Create Itinerary form and/or backend so that submitting a new itinerary successfully persists to the backend and navigates the user to the itinerary detail page.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-generate-sample-itinerary-button-in-the-countryplanningsection-and-or-on-the-create-itinerary-form-when-a-destination-is-pre-populated-when-the-user-selects-a-country-and-clicks-this-button-auto-generate-a-realistic-sample-itinerary-for-that-country-including-a-trip-name-destination-start-end-dates-e-g-7-days-from-today-a-short-description-and-a-set-of-day-by-day-sample-activities-title-time-location-notes-and-persist-it-to-the-backend-then-navigate-the-user-to-the-newly-created-itinerary-s-detail-page",
+      "title": "Add a 'Generate Sample Itinerary' button in the CountryPlanningSection (and/or on the Create Itinerary form when a destination is pre-populated). When the user selects a country and clicks this button, auto-generate a realistic sample itinerary for that country — including a trip name, destination, start/end dates (e.g., 7 days from today), a short description, and a set of day-by-day sample activities (title, time, location, notes) — and persist it to the backend, then navigate the user to the newly created itinerary's detail page.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-request-a-custom-itinerary-section-modal-on-the-home-page-that-allows-users-to-submit-a-proposal-to-the-site-creator-the-form-should-include-fields-for-requester-name-contact-email-destination-preferred-start-date-preferred-end-date-and-optional-notes-on-submit-the-proposal-is-persisted-to-the-backend-and-a-success-confirmation-message-is-shown-to-the-user",
+      "title": "Add a 'Request a Custom Itinerary' section/modal on the Home page that allows users to submit a proposal to the site creator. The form should include fields for: requester name, contact email, destination, preferred start date, preferred end date, and optional notes. On submit, the proposal is persisted to the backend and a success confirmation message is shown to the user.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-audit-and-update-the-app-s-background-and-foreground-color-palette-to-ensure-sufficient-color-contrast-ratios-wcag-aa-minimum-4-5-1-for-normal-text-3-1-for-large-text-across-all-pages-and-components-replace-or-adjust-any-low-contrast-earthy-sandy-background-colors-e-g-overly-light-sand-tones-washed-out-terracotta-with-more-accessible-alternatives-that-retain-the-warm-adventurous-visual-identity-update-css-custom-properties-in-frontend-src-index-css-and-tailwind-tokens-in-frontend-tailwind-config-js-accordingly-ensuring-changes-propagate-consistently-to-all-components-including-cards-headers-buttons-form-inputs-and-the-footer",
+      "title": "Audit and update the app's background and foreground color palette to ensure sufficient color contrast ratios (WCAG AA minimum 4.5:1 for normal text, 3:1 for large text) across all pages and components. Replace or adjust any low-contrast earthy/sandy background colors (e.g., overly light sand tones, washed-out terracotta) with more accessible alternatives that retain the warm, adventurous visual identity. Update CSS custom properties in frontend/src/index.css and Tailwind tokens in frontend/tailwind.config.js accordingly, ensuring changes propagate consistently to all components including cards, headers, buttons, form inputs, and the footer.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Travel itinerary planner website",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Create a backend data model and actor to store travel itineraries. Each itinerary should include: a unique ID, trip name, destination, start date, end date, description, and an ordered list of daily activities (each with a title, time, location, and notes). Provide CRUD operations: create itinerary, get all itineraries, get itinerary by ID, update itinerary, delete itinerary, add activity to a day, update activity, and delete activity.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add a 'Plan an itinerary for a country' column/section with a country dropdown that lets users select a country to start planning an itinerary for that destination.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add an option to auto-generate a sample itinerary based on the selected country.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add an option for users to submit a proposal/request to the site creator to create an itinerary for a specific destination.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add a backend data model and CRUD operations for itinerary proposals. A proposal should include: a unique ID, the requester's name, contact email, desired destination, preferred travel dates (start and end), any special notes, and a submission timestamp. Provide operations to: submit a new proposal, get all proposals, and delete a proposal.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Make the background color more accessible/friendly (improved color contrast and accessibility).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Travel Itinerary Planner",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,82 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Improve background color accessibility and contrast",
+  "requirements": [
+    {
+      "id": "REQ-12",
+      "summary": "Audit and update the app's color palette to meet WCAG AA contrast ratios while preserving the warm, earthy visual identity",
+      "acceptanceCriteria": [
+        "All body text and headings meet WCAG AA contrast ratio (≥ 4.5:1) against their background colors.",
+        "Interactive elements (buttons, links) meet WCAG AA large-text contrast ratio (≥ 3:1).",
+        "The warm, earthy color identity (terracotta, forest green, sand tones) is preserved while using more accessible shade variants.",
+        "CSS custom properties in frontend/src/index.css are updated to reflect the accessible palette.",
+        "Tailwind config color tokens in frontend/tailwind.config.js are updated to match.",
+        "Changes are visually consistent across Home, ItineraryForm, ItineraryDetail, and all shared components (Layout, cards, forms).",
+        "No previously working UI elements are broken or lose their styling."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update CSS custom properties for the earthy color palette to use more accessible shade variants that meet WCAG AA contrast ratios. Replace overly light sand tones and washed-out terracotta with darker, higher-contrast alternatives for backgrounds. Ensure --background, --foreground, --primary, --secondary, --muted, --accent, and chart color variables all provide sufficient contrast (≥ 4.5:1 for normal text, ≥ 3:1 for large text). Preserve the warm, adventurous visual identity by adjusting lightness values in OKLCH color space rather than changing hues."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Update Tailwind color tokens (terracotta, forest, sand, and semantic tokens like primary, secondary, muted, accent) to match the accessible palette defined in index.css. Adjust lightness and chroma values to ensure all foreground/background combinations meet WCAG AA standards. Maintain consistency with CSS custom properties so that utility classes (bg-sand-100, text-terracotta-700, etc.) produce accessible color combinations across all components."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Review and verify that the header, navigation, footer, and main content area background/foreground combinations meet WCAG AA contrast standards after the palette update. Ensure logo, navigation links, and footer text remain readable. Test that the sticky header's background provides sufficient contrast for text and interactive elements."
+        },
+        {
+          "path": "frontend/src/components/ItineraryCard.tsx",
+          "operation": "modify",
+          "description": "Verify that card background, border, and text colors meet WCAG AA contrast requirements. Ensure trip name headings, destination labels, date ranges, and description text are all readable against the updated card background. Confirm that hover and focus states for the card link maintain accessibility."
+        },
+        {
+          "path": "frontend/src/components/ActivityCard.tsx",
+          "operation": "modify",
+          "description": "Verify that activity card backgrounds, text, and interactive elements (edit/delete buttons) meet WCAG AA contrast standards. Ensure activity title, time, location, and notes text are readable. Confirm that form input fields within the inline editing state provide sufficient contrast."
+        },
+        {
+          "path": "frontend/src/components/AddActivityForm.tsx",
+          "operation": "modify",
+          "description": "Verify that form input fields, labels, placeholders, and the submit button meet WCAG AA contrast requirements. Ensure text within inputs is readable against input backgrounds, and that button text meets large-text contrast standards (≥ 3:1)."
+        },
+        {
+          "path": "frontend/src/components/ProposalForm.tsx",
+          "operation": "modify",
+          "description": "Verify that all form inputs (name, email, destination, dates, notes), labels, placeholders, error messages, and the submit button meet WCAG AA contrast standards. Ensure the success state message is readable against its background."
+        },
+        {
+          "path": "frontend/src/components/CountryPlanningSection.tsx",
+          "operation": "modify",
+          "description": "Verify that the country combobox, labels, and action buttons meet WCAG AA contrast requirements. Ensure dropdown options and selected values are readable against their backgrounds."
+        },
+        {
+          "path": "frontend/src/components/ProposalSection.tsx",
+          "operation": "modify",
+          "description": "Verify that section headings, descriptive text, perk list items, and the call-to-action button meet WCAG AA contrast standards. Ensure all text is readable against the section background."
+        },
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Verify that the hero section (headline, subheadline, CTA buttons), feature highlights, and itinerary list section all meet WCAG AA contrast requirements. Ensure text overlays on the hero background image (frontend/public/assets/generated/hero-bg.dim_1440x600.png) are readable. Confirm that section backgrounds, headings, and body text maintain accessibility across the entire homepage."
+        },
+        {
+          "path": "frontend/src/pages/ItineraryDetail.tsx",
+          "operation": "modify",
+          "description": "Verify that the trip overview card, day-by-day timeline, collapsible day headers, activity cards, and all action buttons (add activity, edit, delete) meet WCAG AA contrast standards. Ensure trip name, destination, dates, description, and all activity details are readable against their backgrounds."
+        },
+        {
+          "path": "frontend/src/pages/ItineraryForm.tsx",
+          "operation": "modify",
+          "description": "Verify that all form inputs (trip name, destination, start/end date pickers, description textarea), labels, placeholders, and submit/cancel buttons meet WCAG AA contrast requirements. Ensure error states and validation messages are accessible."
+        }
+      ]
+    }
+  ]
+}

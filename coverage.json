@@ -1,0 +1,50 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-03-02T08:55:09.694Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 1,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-12",
+        "summary": "Audit and update the app's background and foreground color palette to ensure sufficient color contrast ratios (WCAG AA minimum 4.5:1 for normal text, 3:1 for large text) across all pages and components. Replace or adjust any low-contrast earthy/sandy background colors (e.g., overly light sand tones, washed-out terracotta) with more accessible alternatives that retain the warm, adventurous visual identity. Update CSS custom properties in frontend/src/index.css and Tailwind tokens in frontend/tailwind.config.js accordingly, ensuring changes propagate consistently to all components including cards, headers, buttons, form inputs, and the footer.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/components/ItineraryCard.tsx",
+          "frontend/src/components/ActivityCard.tsx",
+          "frontend/src/components/AddActivityForm.tsx",
+          "frontend/src/components/ProposalForm.tsx",
+          "frontend/src/components/CountryPlanningSection.tsx",
+          "frontend/src/components/ProposalSection.tsx",
+          "frontend/src/pages/Home.tsx",
+          "frontend/src/pages/ItineraryDetail.tsx",
+          "frontend/src/pages/ItineraryForm.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/index.css",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

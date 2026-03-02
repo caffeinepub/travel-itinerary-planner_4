@@ -1,0 +1,44 @@
+{
+  "kind": "build_request",
+  "title": "Improve background color accessibility and contrast",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-12",
+      "text": "Audit and update the app's background and foreground color palette to ensure sufficient color contrast ratios (WCAG AA minimum 4.5:1 for normal text, 3:1 for large text) across all pages and components. Replace or adjust any low-contrast earthy/sandy background colors (e.g., overly light sand tones, washed-out terracotta) with more accessible alternatives that retain the warm, adventurous visual identity. Update CSS custom properties in frontend/src/index.css and Tailwind tokens in frontend/tailwind.config.js accordingly, ensuring changes propagate consistently to all components including cards, headers, buttons, form inputs, and the footer.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Background color more accessible friendly"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All body text and headings meet WCAG AA contrast ratio (≥ 4.5:1) against their background colors.",
+        "Interactive elements (buttons, links) meet WCAG AA large-text contrast ratio (≥ 3:1).",
+        "The warm, earthy color identity (terracotta, forest green, sand tones) is preserved while using more accessible shade variants.",
+        "CSS custom properties in frontend/src/index.css are updated to reflect the accessible palette.",
+        "Tailwind config color tokens in frontend/tailwind.config.js are updated to match.",
+        "Changes are visually consistent across Home, ItineraryForm, ItineraryDetail, and all shared components (Layout, cards, forms).",
+        "No previously working UI elements are broken or lose their styling."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not alter immutable files: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, and frontend/src/components/ui.",
+    "Retain the warm, adventurous earthy visual theme — only adjust shades for accessibility, do not switch to an entirely different color scheme.",
+    "Do not modify any backend files."
+  ],
+  "nonGoals": [
+    "Redesigning the overall visual theme or switching away from the earthy/warm aesthetic.",
+    "Adding new features or pages.",
+    "Dark mode implementation.",
+    "Backend changes of any kind."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
